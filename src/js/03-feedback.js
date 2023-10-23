@@ -1,4 +1,5 @@
 import throttle from "lodash.throttle";
+import Notiflix from "notiflix";
 
 const refs = {
     form: document.querySelector('.feedback-form'),
@@ -35,7 +36,7 @@ const hadleSubmitForm = (event) => {
     event.preventDefault();
 
     if (!refs.input.value || !refs.textarea.value) {
-        alert("Please fill out all fields")
+        Notiflix.Notify.warning("Please fill out all fields")
         return
     }
 

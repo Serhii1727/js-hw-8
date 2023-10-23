@@ -22,7 +22,7 @@ const currentSeconds = () => {
 
 currentSeconds()
 
-player.on('timeupdate', throttle(setLocaleStorageData, [wait=1000]));
+player.on('timeupdate', throttle(setLocaleStorageData, 1000));
 
 
 
